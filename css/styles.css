@@ -10,51 +10,72 @@ body {
     background-color: #222;
 }
 
-/* hambu Menu */
+
 .menu-toggle {
+    display: none;
+}
+
+.menu-icon {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 75%;
-
-    img{
-        width: 40px; 
-    }
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
 }
 
-.menu-toggle .bar {
-    width: 25px;
+.menu-icon span {
+    display: block;
     height: 3px;
-    background-color: #000;
-    margin: 4px 0;
-    transition: 0.4s;   
-}
+    background: #333;
+    border-radius: 3px;
+  }
 
 /*Responsive*/
 @media (max-width: 768px) {
-    .nav-links {
+.nav-links {
+        margin-left: 15%;
         display: none;
         flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: #fff;
+        justify-content: right;
+        gap: 10px;
         position: absolute;
-        top: 60px;
+        top: 50px;
         left: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-left: -28%;
+        width: 70%;
+        background: #F5F5F5;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    .menu-toggle {
-        display: flex;
+    
+    .menu-icon {
+        display: block;
+        margin-right: 75%;
+    }
+
+    .menu-icon span {
+        display: block;
+        height: 3px;
+        margin-top: 4px;
+        background: #333;
+        border-radius: 3px;
     }
 
     .hire-btn {
         display: none;
+    }
+
+    .menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+
+    .hire-btn-resp{
+        display: block !important;
     }
 }
 
@@ -100,6 +121,10 @@ nav ul li a {
     color: #fff;
     border-radius: 25px;
     text-decoration: none;
+}
+
+.hire-btn-resp{
+    display: none ;
 }
 
 /* Main Section */
@@ -719,3 +744,4 @@ footer {
     margin: 0;
     font-size: 14px;
 }
+
