@@ -97,6 +97,11 @@ header .logo {
     font-weight: bold;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #000;
+}
+
 nav ul {
     list-style: none;
     display: flex;
